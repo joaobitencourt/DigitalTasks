@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --blur-background: rgba(000, 000, 000, 0.8);
+    --light-BlueBackground: rgba(58, 109, 141, 0.45);
+
+    --whiteColor: #d3cccc;
+
+    scroll-behavior: smooth;
+    background: #fff5f5;
+    /* font-size: clamp(5px, 10px, 25px);  */
+    font-size: 10PX;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Scroll style */
+
+::-webkit-scrollbar {
+    width: .5rem;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--whiteColor); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+#contentWrapper{
+    display: grid;
+
+}
