@@ -53,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./public/img/backgroundBlack.png');
+    background: url('/public/img/backgroundBlack.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
