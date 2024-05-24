@@ -6,6 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./public/style/style.css">
     <script src="./public/scripts/script.js"></script>
     <title>Digital Tasks</title>
@@ -13,20 +16,104 @@
 <body>
     <div id="contentWrapper">
         <header>
-                <h1>Digital Tasks  <section class="underline"></section></h1>
+                <h1>Digital Tasks
+                    <p>" Tudo é possível "</p>
+                </h1>
+               <section class="scrollDown">
+                <i class="fa-solid fa-angles-down"></i>
+               </section>
         </header>
         <main>
             <nav>
                 <ul>
                     <li id="Home" class="navItem"><a class="navigationLinks" href="#Home">Home</a></li>
-                    <li class="navItem"><a class="navigationLinks" href="#Sobre">Sobre</a></li>
+                    <li class="navItem"><a class="navigationLinks" href="#Sobre">About</a></li>
                     <li class="navItem"><a class="navigationLinks" href="#Home"> <img src="./public/img/favicon-32x32.png">  </a></li>
-                    <li class="navItem"><a class="navigationLinks" href="#Projetos">Projetos</a></li>
-                    <li class="navItem"><a class="navigationLinks" href="#Contato">Contato</a></li>
+                    <li class="navItem"><a class="navigationLinks" href="#Projetos">Project</a></li>
+                    <li class="navItem"><a class="navigationLinks" href="#Contato">Contact</a></li>
                 </ul>
             </nav>
+
+            <section class="flexColumnContent diagonal">
+                <h1 id="About">About  <section class="underline"></section> </h1>
+                <section class="commonContent">
+                    <section id="aboutContent">
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+                    </section>
+                    
+                </section>
+            </section>
+            
+            <section id="servicesWrapper" class="flexColumnContent">
+                <section id="services">
+                    <section class="servicesCards">
+                        <i class="fa-brands fa-square-github"></i>
+                        <p class="servicesTitle">titulo</p>
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    </section>
+                    <section class="servicesCards">
+                        <i class="fa-brands fa-square-github"></i>
+                        <p class="servicesTitle">titulo</p>
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    </section>
+                    <section class="servicesCards">
+                        <i class="fa-brands fa-square-github"></i>
+                        <p class="servicesTitle">titulo</p>
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    </section>
+                    <section class="servicesCards">
+                        <i class="fa-brands fa-square-github"></i>
+                        <p class="servicesTitle">titulo</p>
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                    </section>
+                </section>
+                <section class="commonContent">
+                    <section class="projectsItems">
+                        <img src="/public/img/Home Page 1.png" alt="projeto smeaton" >
+                        <section class="blur">
+                            <section class="cardDados">
+                                <h1>Projeto A</h1>
+                                <p>Projeto legal</p>
+                            </section>
+                        </section>  
+                    </section>
+                    <section class="projectsItems">
+                        <img src="/public/img/3.png" alt="projeto smeaton" >
+                        <section class="blur"></section>
+                    </section>
+                    <section class="projectsItems">
+                        <img src="/public/img/Home Page 1.png" alt="projeto smeaton" >
+                        <section class="blur"></section>
+                    </section>
+                    <section class="projectsItems">
+                        <img src="/public/img/Home Page 1.png" alt="projeto smeaton" >
+                        <section class="blur"></section>
+                    </section>
+                </section>
+            </section>
+
+            <selection   class="contato">
+                <a href=" https://wa.me/5511964563915" target="_blank">
+                    <i  class="fa-brands fa-whatsapp"></i>
+                </a>
+            </selection>
+
         </main>
-        <footer></footer>
+        <footer id="Contato">
+            <p>by DigitalTasks &#169;2024</p>
+            <a href="#Home">HOME</a>
+            <section id="socialMedias">
+                <a href="https://github.com/joaobitencourt" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="https://www.instagram.com/digitaltasks_/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a  href="https://www.linkedin.com/in/joaobitencourtdev/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </section>
+        </footer>
     </div>
 </body>
 </html>

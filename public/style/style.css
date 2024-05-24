@@ -8,19 +8,22 @@
 
 :root{
     --blur-background: rgba(000, 000, 000, 0.8);
+    --New-blur-background: rgba(000, 000, 000, 0.5);
     --light-BlueBackground: rgba(58, 109, 141, 0.45);
     --NormalBoxShadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
+    --MaiBlackGreyColor: #363435;
     --whiteColor: #d3cccc;
-    --FontColor1: #363435;
+    --OrangeDigitalTasks:  #FEAD23;
+    --blackColor: #101010;
 
     --NormalFont:"Kufam", sans-serif;
-
+    
     scroll-behavior: smooth;
     background: #fff5f5;
-    /* font-size: clamp(5px, 10px, 25px);  */
     font-size: 10PX;
     font-family: 'PT Sans', sans-serif;
+    background-color: var(--MaiBlackGreyColor);
 }
 
 /* Scroll style */
@@ -31,7 +34,7 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--whiteColor); 
+    background: var(--MaiBlackGreyColor); 
   }
    
   /* Handle */
@@ -44,9 +47,18 @@
     background: #555; 
   }
 
+
+p{
+    font-family: var(--NormalFont);
+    font-size: clamp(1vw, 2rem, 20vw);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--MaiBlackGreyColor);
+}
+
 #contentWrapper{
     display: grid;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-rows: 1fr auto auto;
 }
 
 #contentWrapper header{
@@ -62,7 +74,7 @@
 }
 
 .underline {
-    background: #FEAD23;
+    background: var(--OrangeDigitalTasks);
     margin: 0 auto;
     height: 4px;
     width: 15rem;
@@ -75,21 +87,52 @@
     text-align: center;
     text-transform: uppercase;
     color: white;
+    animation: fadeIn 3s ease-in forwards;
+}
+
+#contentWrapper header h1 p{
+    font-family: var(--NormalFont);
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--OrangeDigitalTasks);
+    animation: fadeIn 4s ease-in forwards;
+}
+
+#contentWrapper header .scrollDown{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin: 0 auto;
+    animation: fadeIn 7s ease-in forwards, float 3.2s ease-in-out infinite;
+}
+
+#contentWrapper header .scrollDown i{
+    font-size: 3rem;
+    color: var(--whiteColor);
 }
 
 #contentWrapper main{
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
+    gap: 10rem;
 }
 
 main nav{
-    width: 80vw;
+    width: 5vw;
     height: auto;
     background-color: #D9D9D9;
     box-shadow: var(--NormalBoxShadow);
+    border-radius: .3rem;
 }
+
+main nav:hover{
+    animation: horizontalGrow 4s ease-in-out forwards;
+} 
 
 main nav ul{
     display: flex;
@@ -101,17 +144,283 @@ main nav ul{
 
 main nav ul li{
     list-style: none;
+    display: none;
+}
+
+main nav ul li.navItem:nth-child(3){
+    opacity: 1;
+    display: block;
+}
+
+
+main nav:hover ul li{
+    display: block;
+    animation: fadeIn 3s ease-in forwards;
 }
 
 main nav ul li a{
     font-family: var(--NormalFont);
-    font-size: 4rem;
+    font-size: clamp( 10px, 3rem, 8vw);
     font-weight: 400;
     font-style: normal;
-    color: var(--FontColor1);
+    color: var(--MaiBlackGreyColor);
+}
+
+main h1{
+    font-family: var(--NormalFont);
+    font-size: clamp( 2vw, 4rem, 8vw);
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #FFF;
+    margin: 0 0 7rem 0;
+}
+
+main h1#About{
+    color: var(--MaiBlackGreyColor);
+    margin: 0;
+}
+
+main .flexColumnContent.diagonal{
+    position: relative;
+    isolation: isolate; /*Esse valor diz que o z-index ficará sempre dentro do .diagonal*/
+}
+
+main .flexColumnContent.diagonal::after{
+    content:'';
+    background-color: var(--OrangeDigitalTasks);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(5deg);
+}
+
+main .commonContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main .commonContent #aboutContent{
+    padding: 3.5rem 1.8rem 3.5rem 1.8rem;
+}
+
+main .commonContent #aboutContent p{
+    font-family: var(--NormalFont);
+    font-size: clamp(1vw, 2rem, 20vw);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--MaiBlackGreyColor);
+    width: 100vw;
+    height: 100%;
+    padding: 3.5rem 1.8rem 3.5rem 1.8rem;
+}
+
+main #servicesWrapper{
+    background: var(--blackColor);
+}
+
+main #servicesWrapper #services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem;
+    gap: 5rem;
 }
 
 
+main #servicesWrapper #services .servicesCards{
+    border: 1px solid var(--whiteColor);
+    padding: 1.5rem;
+}
+
+main #servicesWrapper #services .servicesCards i{
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+    color: var(--whiteColor);
+}
+
+main #servicesWrapper #services .servicesCards .servicesTitle{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 1rem 0 1rem 0;
+}
+
+main #servicesWrapper #services .servicesCards p{
+    font-family: var(--NormalFont);
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+    color: var(--whiteColor);
+}
 
 
+main .flexColumnContent .commonContent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
+main .flexColumnContent .commonContent .projectsItems{
+    position: relative;
+    isolation: isolate;
+    max-width: 45rem;
+} 
+
+main .flexColumnContent .commonContent .projectsItems img{
+    width: 360px;
+    height: 640px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*Para esse elemento sobre por o outro o elemento mais externo ou pai, devem estar com a posição relativa, podendo assim esse elemento ficar absoluto dentro dele*/
+main .flexColumnContent .commonContent .projectsItems .blur{
+    width: 100%;
+    height: 100%;
+    background-color: var(--New-blur-background);
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+}
+
+main .flexColumnContent .commonContent .projectsItems .blur .cardDados{
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+    justify-content: end;
+    height: 100%;
+    width: 100%;
+    padding: 0 0 1.5rem 1.5rem;
+}
+
+main .flexColumnContent .commonContent .projectsItems .blur .cardDados h1{
+    font-size: clamp( 2vw,4rem, 8vw);
+    margin: 0 0 1.5rem 0;
+}
+
+main .flexColumnContent .commonContent .projectsItems .blur .cardDados p{
+    color: var(--OrangeDigitalTasks);
+}
+
+main .contato{
+    position: fixed;
+    top: 85%;
+    right: 1rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    text-align: center;
+    padding-top: 0.9rem;
+    border-radius: 3rem;
+    background-color: #25d366;
+    animation: fadeIn 4s ease-in forwards;
+}
+
+main .contato:hover{
+    background-color: #075e54;
+}
+
+main .contato i{
+    font-size: 3.5rem;
+    font-weight: lighter;
+    color: var(--whiteColor);
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 5vh;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer #socialMedias{
+    display: flex;
+    align-items: center;
+    margin: 0 3rem .5rem 0;
+}
+
+footer #socialMedias i{
+    font-size: 2rem;
+    font-weight: lighter;
+    color: var(--whiteColor);
+    margin: 0 1rem 0 0;
+}
+
+footer p{
+    font-family: var(--NormalFont);
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 0 0 .5rem 3rem;
+    color: var(--whiteColor);
+}
+
+footer a{
+    font-family: var(--NormalFont);
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 0 0 .5rem 0;
+    color: var(--OrangeDigitalTasks);
+    text-decoration: none;
+}
+
+/* KeyFrames */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes horizontalGrow{
+    0%{
+        width: 10vw;
+    }
+    25%{
+        width: 25vw;
+    }
+    50%{
+        width: 45vw;
+    }
+    100%{
+        width: 80vw;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
